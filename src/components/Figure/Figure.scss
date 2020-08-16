@@ -1,0 +1,29 @@
+.Figure {
+  display: flex;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--c-hover);
+  border-radius: 50%;
+  font-size: 40px;
+  img {
+    width: 100%;
+  }
+  svg {
+    font-size: 20px;
+  }
+  &-small {
+    font-size: 28px;
+    svg {
+      font-size: 16px;
+    }
+  }
+  &-big {
+    font-size: 48px;
+  }
+  &-transparent {
+    background-color: transparent;
+  }
+}

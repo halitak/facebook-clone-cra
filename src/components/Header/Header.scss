@@ -1,0 +1,19 @@
+.Header {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 16px;
+  padding-left: 16px;
+  background-color: var(--c-bg-header);
+  > div:first-child {
+    display: flex;
+    align-items: center;
+  }
+}
+.Logo {
+  margin-right: 8px;
+  svg {
+    font-size: 40px !important;
+  }
+}
