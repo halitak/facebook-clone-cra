@@ -1,0 +1,31 @@
+{
+    "extends": [
+        "@atolye15/eslint-config"
+    ],
+    "rules": {
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true
+            }
+        ],
+        "react/jsx-props-no-spreading": [
+            "off",
+            {
+                "exceptions": [
+                    "svg"
+                ]
+            }
+        ]
+    }
+}

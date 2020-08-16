@@ -1,25 +1,42 @@
 {
-  "name": "cra-starter",
+  "name": "facebook-clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/classnames": "^2.2.10",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "classnames": "^2.2.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.12.21",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "format:check": "prettier -c \"src/**/*.{ts,tsx}\"",
+    "format:ts": "prettier --write \"src/**/*.{ts,tsx}\" && yarn lint:eslint --fix",
+    "format:css": "stylelint --fix --syntax scss \"src/**/*.scss\"",
+    "format": "yarn run format:ts && yarn run format:css",
+    "lint:ts": "tsc && yarn lint:eslint",
+    "lint:css": "stylelint --syntax scss \"src/**/*.scss\"",
+    "lint": "yarn run lint:ts && yarn run lint:css",
+    "lint:eslint": "eslint \"src/**/*.{ts,tsx}\"",
+    "coverage": "yarn run test --coverage",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "icon": "svgr src/icons -d src/components/Icons --icon --replace-attr-values \"#B0B3B8=currentColor\" --typescript"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +52,60 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@atolye15/eslint-config": "^1.1.1",
+    "@atolye15/stylelint-config": "^1.3.0",
+    "@babel/core": "^7.11.1",
+    "@hot-loader/react-dom": "^16.13.0",
+    "@storybook/addon-actions": "^6.0.10",
+    "@storybook/addon-essentials": "^6.0.10",
+    "@storybook/addon-info": "^5.3.19",
+    "@storybook/addon-links": "^6.0.10",
+    "@storybook/react": "^6.0.10",
+    "@svgr/cli": "^5.4.0",
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/react-loadable": "^5.5.3",
+    "@types/react-router-dom": "^5.1.5",
+    "babel-jest": "^26.3.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "customize-cra": "^1.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
+    "enzyme-to-json": "^3.5.0",
+    "eslint": "^7.7.0",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.0.5",
+    "react-app-rewired": "^2.1.6",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-is": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.1.2"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/index.tsx",
+      "!src/setupTests.ts",
+      "!src/components/**/index.{ts,tsx}",
+      "!src/components/**/*.stories.{ts,tsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
   }
 }
