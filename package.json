@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "npm run build-storybook && react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "format:check": "prettier -c \"src/**/*.{ts,tsx}\"",
@@ -35,7 +35,7 @@
     "lint:eslint": "eslint \"src/**/*.{ts,tsx}\"",
     "coverage": "yarn run test --coverage",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o public/ui",
     "icon": "svgr src/icons -d src/components/Icons --icon --replace-attr-values \"#B0B3B8=currentColor\" --typescript"
   },
   "eslintConfig": {
