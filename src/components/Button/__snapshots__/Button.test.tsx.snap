@@ -1,17 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly primary button 1`] = `
+exports[`renders correctly normal button 1`] = `
 <button
-  className="Button Button-primary"
+  className="Button"
 >
-  Primary Button
+  Normal Button
 </button>
 `;
 
-exports[`renders correctly secondary button 1`] = `
+exports[`renders correctly small button 1`] = `
 <button
-  className="Button Button-secondary"
+  className="Button Button-small"
 >
-  Secondary Button
+  Small Button
+</button>
+`;
+
+exports[`renders correctly small button 2`] = `
+<button
+  className="Button Button-figure"
+>
+  Figure Button
 </button>
 `;

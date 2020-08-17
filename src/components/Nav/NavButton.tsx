@@ -11,9 +11,9 @@ type Props = JSX.IntrinsicElements['button'] & {
 const NavButton: FC<Props> = ({ active, children }) => {
   const classNames = cx('NavButton', { Active: active });
   return (
-    <Button className={classNames}>
-      <div>{children}</div>
-    </Button>
+    <div className={classNames}>
+      <Button>{children}</Button>
+    </div>
   );
 };
 

@@ -6,6 +6,7 @@ import * as Icons from '../Icons';
 import Figure from '../Figure';
 
 import { PROFILE_PHOTO } from '../../constants';
+import Text from '../Text';
 
 const Settings: FC = () => {
   return (
@@ -14,7 +15,7 @@ const Settings: FC = () => {
         <Figure small>
           <img src={PROFILE_PHOTO.src} alt={PROFILE_PHOTO.title} />
         </Figure>
-        <span>Halit Ak</span>
+        <Text bold>Halit Ak</Text>
       </Button>
       <Button figure>
         <Figure>

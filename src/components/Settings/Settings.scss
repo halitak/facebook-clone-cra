@@ -1,8 +1,10 @@
 .Settings {
-  display: flex;
   flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
-  > * + * {
+  width: 300px;
+  > button + button {
     margin-left: 8px;
   }
 }

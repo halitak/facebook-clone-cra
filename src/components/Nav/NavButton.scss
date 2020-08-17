@@ -1,35 +1,25 @@
 .NavButton {
-  height: 100%;
   flex: 1;
   padding: 4px 0 0;
   border-bottom: 3px solid transparent;
-  border-radius: 0;
-  &:hover {
-    background-color: transparent;
-  }
   &.Active {
     border-color: var(--c-primary);
     svg {
       color: var(--c-primary);
     }
+    button:hover {
+      background-color: transparent;
+    }
   }
-  > div {
-    display: flex;
+  button {
+    width: 100%;
     height: 100%;
-    flex: 1;
-    align-items: center;
     justify-content: center;
     border-radius: 8px;
     transition: var(--fade);
   }
-  &:not(.Active):hover > div {
-    background-color: var(--c-hover);
-  }
   svg {
     color: var(--c-secondary-text);
     font-size: 28px;
-  }
-  & + & {
-    margin-left: 8px;
   }
 }

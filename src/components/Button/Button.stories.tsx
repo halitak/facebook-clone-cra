@@ -7,8 +7,12 @@ import { Close } from '../Icons';
 import { PROFILE_PHOTO } from '../../constants';
 
 storiesOf('Button', module)
-  .add('Normal', () => <Button>Normal Button</Button>)
-  .add('Small', () => <Button small>Small Button</Button>)
+  .add('Normal', () => <div className="h-stack">
+    <Button small>Small Button</Button>
+    <Button>Normal Button</Button>
+    <Button big>Big Button</Button>
+    <Button xbig>Bigger Button</Button>
+  </div>)
   .add('Figure', () => (
     <div className="h-stack">
       <Button figure>

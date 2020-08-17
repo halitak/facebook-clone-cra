@@ -1,13 +1,12 @@
 import React, { FunctionComponent } from 'react';
 import { Link } from 'react-router-dom';
-import Sidenav from '../../components/Sidenav';
+import Main from '../../components/Main/Main';
 
 const Home: FunctionComponent = () => (
-  <div>
-    <Sidenav />
-    <h1>Home page</h1>
+  <>
+    <Main />
     <Link to="/feed">Go to feed</Link>
-  </div>
+  </>
 );
 
 export default Home;

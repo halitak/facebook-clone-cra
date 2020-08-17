@@ -10,21 +10,21 @@ import { ArrowBottom } from '../Icons';
 const Sidenav: FC = () => {
   return (
     <aside className="Sidenav">
-      <Button>
+      <Button big>
         <Figure small>
           <img src={PROFILE_PHOTO.src} alt={PROFILE_PHOTO.title} />
         </Figure>
         <Text bold>Halit Ak</Text>
       </Button>
       {SIDENAV_PHOTOS.map((image) => (
-        <Button>
+        <Button big>
           <Figure small transparent>
             <img src={image.src} alt={image.title} />
           </Figure>
           <Text bold>{image.title}</Text>
         </Button>
       ))}
-      <Button>
+      <Button big>
         <Figure small>
           <ArrowBottom />
         </Figure>

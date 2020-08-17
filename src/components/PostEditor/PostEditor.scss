@@ -1,0 +1,54 @@
+.PostEditor{
+    background-color: var(--c-bg-card);
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px 10px;
+    border-radius: 8px;
+    width: 500px;
+    >div{
+        display: flex;
+    }
+    .Button-figure{
+        flex-shrink: 0;
+    }
+    .Modal-trigger{
+        background-color: var(--c-hover);
+        border-radius: 20px;
+        height: 40px;
+        color: var(--c-secondary-text);
+        font-size: 17px;
+        padding: 8px 12px;
+        margin-left: 8px;
+        width: 100%;
+        &:hover{
+            background-color: rgba(255,255,255,.2);
+        }
+    }
+    &-footer{
+        button{
+            flex: 1;
+            color: var(--c-secondary-text);
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            &:nth-child(1) svg{
+                color: var(--c-red);
+            }
+            &:nth-child(2) svg{
+                color: var(--c-green);
+            }
+            &:nth-child(3) svg{
+                color: var(--c-yellow);
+            }
+        }
+        svg{
+            font-size: 24px;
+        }
+    }
+    hr{
+        height: 1px;
+        background-color: var(--c-hover);
+        margin-top: 12px;
+        margin-bottom: 8px;
+    }
+}

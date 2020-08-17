@@ -2,11 +2,12 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
 import Routes from './routes';
+import Header from './components/Header';
 
 it('has a header', () => {
   const wrapper = shallow(<App />);
 
-  expect(wrapper.find('header').exists()).toBe(true);
+  expect(wrapper.find(Header).exists()).toBe(true);
 });
 
 it('has a footer', () => {

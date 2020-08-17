@@ -11,7 +11,7 @@ import Settings from '../Settings';
 const Header: FC = () => {
   return (
     <header className="Header">
-      <div style={{ flexShrink: 0 }}>
+      <div className="LogoSearch">
         <Button figure className="Logo">
           <Figure>
             <Facebook />

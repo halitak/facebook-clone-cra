@@ -6,14 +6,18 @@
   padding-right: 16px;
   padding-left: 16px;
   background-color: var(--c-bg-header);
+  grid-column: span 3;
   > div:first-child {
     display: flex;
     align-items: center;
   }
-}
-.Logo {
-  margin-right: 8px;
-  svg {
-    font-size: 40px !important;
+  .Logo {
+    margin-right: 8px;
+    .Figure svg {
+      font-size: 40px;
+    }
+  }
+  .LogoSearch{
+    width: 300px;
   }
 }

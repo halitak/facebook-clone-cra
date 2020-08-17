@@ -7,7 +7,7 @@
   outline: none;
 }
 html {
-  font-size: 1rem;
+  font-size: 15px;
 }
 body {
   background-color: var(--c-bg);
@@ -21,4 +21,11 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.layout{
+  display: grid;
+  grid-template-rows: 60px auto;
+  grid-template-columns: 300px 1fr 300px;
+  grid-row-gap: 16px;
 }
