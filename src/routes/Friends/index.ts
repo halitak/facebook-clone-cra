@@ -2,9 +2,9 @@ import Loadable from 'react-loadable';
 
 import Loading from '../../components/Loading';
 
-const LoadableFeed = Loadable({
-  loader: () => import('./Feed'),
+const LoadableFriends = Loadable({
+  loader: () => import('./Friends'),
   loading: Loading,
 });
 
-export default LoadableFeed;
+export default LoadableFriends;

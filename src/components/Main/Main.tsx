@@ -4,15 +4,19 @@ import "./Main.scss";
 import Sidenav from "../Sidenav";
 import Story from "../Story";
 import PostEditor from "../PostEditor";
+import Post from "../Post";
+import Group from "../Group";
 
 const Main: FC = () => {
-    return <>
+    return <main className="Main">
         <Sidenav />
-        <main className="Main">
+        <div className="Container">
             <Story />
             <PostEditor />
-        </main>
-    </>
+            <Post />
+        </div>
+        <Group />
+    </main>
 }
 
 export default Main;

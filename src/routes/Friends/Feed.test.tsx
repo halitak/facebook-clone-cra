@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Feed from './Feed';
+import Friends from './Friends';
 
 it('render correctly', () => {
-  const wrapper = shallow(<Feed />);
+  const wrapper = shallow(<Friends />);
   expect(wrapper).toMatchSnapshot();
 });

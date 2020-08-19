@@ -13,6 +13,7 @@ import story2 from '../img/story2.jpg';
 import story3 from '../img/story3.jpg';
 import story4 from '../img/story4.jpg';
 
+
 interface PHOTO {
   src: string;
   title: string;
@@ -75,3 +76,4 @@ export const SIDENAV_PHOTOS: PHOTO[] = [
     title: 'Fundraisers',
   },
 ];
+

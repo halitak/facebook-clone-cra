@@ -7,6 +7,10 @@
   padding-left: 16px;
   background-color: var(--c-bg-header);
   grid-column: span 3;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin-bottom: 16px;
   > div:first-child {
     display: flex;
     align-items: center;

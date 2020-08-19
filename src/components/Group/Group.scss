@@ -1,0 +1,16 @@
+.Group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    position: sticky;
+    top: calc(60px + 16px);
+    align-self: flex-start;
+    button{
+        margin-top: 8px;
+    }
+    .Title{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

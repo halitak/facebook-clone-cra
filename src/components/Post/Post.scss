@@ -1,0 +1,93 @@
+.Post{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--c-bg-card);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    &-header{
+        display: flex;
+        padding: 10px 16px;
+        >div{
+            display: flex;
+            flex-direction: column;
+            margin-left: 8px;
+            small{
+                font-size: 13px;
+                display: flex;
+                align-items: center;
+                color: var(--c-secondary-text);
+                svg{
+                    font-size: 12px;
+                }
+                span{
+                    margin-right: .25em;
+                }
+            }
+        }
+        >button{
+            margin-left: auto;
+            figure{
+                background-color: transparent;
+            }
+        }
+    }
+    &-body{
+        display: flex;
+        flex-direction: column;
+        &-content{
+            padding: 0 16px 10px;
+            white-space: pre-wrap;
+        }
+        img{
+            object-fit: cover;
+            height: 300px;
+        }
+    }
+    &-footer{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 16px;
+        color: var(--c-secondary-text);
+        >div{
+            display: flex;
+            justify-content: space-between;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+            +a{
+                margin-left: 7px;
+            }
+        }
+        hr{
+            height: 1px;
+            background-color: var(--c-hover);
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+    }
+    &-like-count{
+        display: flex;
+        align-items: center;
+        svg{
+            font-size: 18px;
+        }
+        span{
+            margin-left: 6px;
+        }
+    }
+    &-actions{
+        button{
+            flex: 1;
+            justify-content: center;
+        }
+        svg{
+            font-size: 18px;
+        }
+    }
+}
