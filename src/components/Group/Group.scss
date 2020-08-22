@@ -6,6 +6,7 @@
     position: sticky;
     top: calc(60px + 16px);
     align-self: flex-start;
+    flex-shrink: 0;
     button{
         margin-top: 8px;
     }

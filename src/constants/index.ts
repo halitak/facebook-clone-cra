@@ -13,6 +13,13 @@ import story2 from '../img/story2.jpg';
 import story3 from '../img/story3.jpg';
 import story4 from '../img/story4.jpg';
 
+export default {
+  TABLET_SIZE: 700,
+  DESKTOP_SIZE: 900,
+  LARGE_SIZE: 1100,
+  XLARGE_SIZE: 1260
+}
+
 
 interface PHOTO {
   src: string;

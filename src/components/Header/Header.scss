@@ -1,8 +1,9 @@
+@import "../../styles/mixin.scss";
+
 .Header {
-  display: flex;
   height: 60px;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
   padding-right: 16px;
   padding-left: 16px;
   background-color: var(--c-bg-header);
@@ -11,6 +12,10 @@
   top: 0;
   z-index: 2;
   margin-bottom: 16px;
+  @include mq('tablet')
+  {
+    justify-content: space-between;
+  }
   > div:first-child {
     display: flex;
     align-items: center;
@@ -22,6 +27,26 @@
     }
   }
   .LogoSearch{
-    width: 300px;
+    flex-shrink: 0;
+    @include mq('tablet')
+    {
+      width: calc((40px * 4) + (8px * 3));
+    }
+    @include mq('xlarge')
+    {
+      width: 300px;
+    }
+  }
+  .Navigation{
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .Settings{
+    margin-left: auto;
+    flex-shrink: 0;
+    @include mq('tablet')
+    {
+      margin-left: 0;
+    }
   }
 }

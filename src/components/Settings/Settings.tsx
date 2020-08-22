@@ -5,18 +5,20 @@ import Button from '../Button';
 import * as Icons from '../Icons';
 import Figure from '../Figure';
 
-import { PROFILE_PHOTO } from '../../constants';
+import CONST, { PROFILE_PHOTO } from '../../constants';
 import Text from '../Text';
+import useWindowSize from '../../hooks/useWindowSize';
 
 const Settings: FC = () => {
+  const size = useWindowSize();
   return (
     <div className="Settings">
-      <Button small style={{ borderRadius: '18px' }}>
+      {size.width > CONST.XLARGE_SIZE && <Button small style={{ borderRadius: '18px' }}>
         <Figure small>
           <img src={PROFILE_PHOTO.src} alt={PROFILE_PHOTO.title} />
         </Figure>
         <Text bold>Halit Ak</Text>
-      </Button>
+      </Button>}
       <Button figure>
         <Figure>
           <Icons.Plus />

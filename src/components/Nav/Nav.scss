@@ -1,8 +1,11 @@
+@import "../../styles//mixin.scss";
+
 .Navigation {
-  width: 100%;
   max-width: 600px;
   height: 60px;
-  display: grid;
-  grid-template-columns: repeat(5,1fr);
-  column-gap: 8px;
+  display: flex;
+  @include mq('tablet')
+  {
+    width: 100%;
+  }
 }
